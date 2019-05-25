@@ -1,0 +1,30 @@
+.nav {
+background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet,red,orange,yellow,green,blue,indigo,violet);
+background-size: 200% 100%;
+
+-webkit-animation: rainbow .5s linear infinite;
+-z-animation: rainbow .5s linear  infinite;
+-o-animation: rainbow .5s linear  infinite;
+  animation: rainbow .5s linear  infinite;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 0%}
+    100%{background-position:100% 100%}
+
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 0%}
+    100%{background-position:100% 100%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 0%}
+    100%{background-position:100% 100%}
+}
+@keyframes rainbow {
+    0%{background-position:0% 0%}
+    100%{background-position:100% 100%}
+}
+*{
+  font-family: cursive !important;
+  color:red;
+}

@@ -54,6 +54,10 @@ function addElement (num) {
 
 }
 
+function aaaa(){
+	$('head').append('<link rel="stylesheet" type="text/css" href="assets/help.css">');
+}
+
 // Scroll animation
 $("#middle").on("scroll", function () {
   var pageTop = $("#middle").scrollTop();
@@ -82,4 +86,13 @@ while (numlist.length >0){
 	newButton.appendChild(document.createTextNode(info[numlist[rand]][0]));
 	buttons.appendChild(newButton);
 	numlist.splice(rand,1);
+}
+
+document.addEventListener('keydown', logKey);
+function logKey(e){
+	console.log(e);
+	console.log(e.getModifierState("Alt"))
+	if(e.keyCode == 38 && e.ctrlKey && e.shiftKey && e.altKey){
+		aaaa();
+	}
 }
