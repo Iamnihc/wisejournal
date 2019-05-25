@@ -67,26 +67,9 @@ $("#middle").on("scroll", function () {
     var tag = tags[i];
     var tagtop=$(tag).position().top;
     var diff;
-		/*
-    if (pageTop-tagtop>tot){
-      diff=0;
-    }
-    else if (pageTop-tagtop<0){
-      diff=tagtop-pageTop;
-    }
-    else{
-      diff=pageTop-tagtop;
-    }
-		*/
 		diff = Math.abs(tagtop % tot);
     console.log(i+" diff "+diff);
     var op=(1-((diff)/(tot)))**8;
     tag.style.opacity = op;
   }
 })
-/*
-$("#middle").scroll(function(){
-    $(".infosection").css("opacity", 1 - ($(".infosection").scrollTop()  .)/ 250);
-		console.log( 1 - $(".infosection").scrollTop() / 250);
-  });
-*/
