@@ -1,3 +1,8 @@
+var dev = navigator.platform.substring(0,3).toLowerCase();
+var valid = dev =="mac" || dev == "win" || dev == "ipa";
+if (!valid){ alert("try chrome on desktop for the best experience");}
+
+
 
 var info = [["Event 1", "event body for things"],["Event 2","event things stuff so its long"],["Thing 3","here is stuff it should maybe possibly work"],["Thing 4","thigns that may or may not work but now theyre long"],["Thing 4","thigns that may or may not work but now theyre long"],["Thing 4","thigns that may or may not work but now theyre long"]];
 
