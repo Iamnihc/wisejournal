@@ -6,15 +6,6 @@ var numlist = [];
 for (var i = 0; i< info.length; i++){
 	numlist.push(i);
 }
-while (numlist.length >0){
-
-	var newButton = document.createElement("button");
-	var rand = Math.floor(Math.random() * numlist.length);
-	newButton.setAttribute("onclick", "showline("+(numlist[rand]+1)++")");
-	newButton.appendChild(document.createTextNode(info[numlist[rand]][0]));
-	buttons.appendChild(newButton);
-	numlist.splice(rand,1);
-}
 
 var currentEvent = 1;
 function showline(num){
@@ -35,7 +26,7 @@ function showline(num){
 	}
 }
 
-
+// Adding stuff
 function addElement (num) {
   var newDiv = document.createElement("div");
 	newDiv.setAttribute("class", "infosection");
@@ -57,7 +48,7 @@ function addElement (num) {
 
 }
 
-
+// Scroll animation
 $("#middle").on("scroll", function () {
   var pageTop = $("#middle").scrollTop();
   var pageBottom = pageTop + $("#middle").height();
@@ -73,3 +64,14 @@ $("#middle").on("scroll", function () {
     tag.style.opacity = op;
   }
 })
+
+// make buttons
+while (numlist.length >0){
+
+	var newButton = document.createElement("button");
+	var rand = Math.floor(Math.random() * numlist.length);
+	newButton.setAttribute("onclick", "showline("+(numlist[rand]+1)++")");
+	newButton.appendChild(document.createTextNode(info[numlist[rand]][0]));
+	buttons.appendChild(newButton);
+	numlist.splice(rand,1);
+}
