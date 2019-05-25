@@ -1,5 +1,5 @@
 
-var info = [["event 1", "event body for things"],["event 2","event things stuff so its long"],["thing","here is stuff it should maybe possibly work"],["thing","thigns that may or may not work but now theyre long"]];
+var info = [["Event 1", "event body for things"],["Event 2","event things stuff so its long"],["Thing 3","here is stuff it should maybe possibly work"],["Thing 4","thigns that may or may not work but now theyre long"],["Thing 4","thigns that may or may not work but now theyre long"],["Thing 4","thigns that may or may not work but now theyre long"]];
 
 var buttons = document.getElementById("bottom");
 var numlist = [];
@@ -14,6 +14,7 @@ function showline(num){
 		console.log("adding");
 		currentEvent ++;
 		addElement(num)
+		document.getElementById("button" + num).setAttribute("class", "clicked");
 	}
 	else if (num<currentEvent){
 		var currentDiv = document.getElementById("middle");
@@ -71,6 +72,8 @@ while (numlist.length >0){
 	var newButton = document.createElement("button");
 	var rand = Math.floor(Math.random() * numlist.length);
 	newButton.setAttribute("onclick", "showline("+(numlist[rand]+1)+")");
+	newButton.setAttribute("type", "button");
+	newButton.setAttribute("id", "button" + (numlist[rand]+1));
 	newButton.appendChild(document.createTextNode(info[numlist[rand]][0]));
 	buttons.appendChild(newButton);
 	numlist.splice(rand,1);
