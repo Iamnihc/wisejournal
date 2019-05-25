@@ -10,7 +10,7 @@ while (numlist.length >0){
 
 	var newButton = document.createElement("button");
 	var rand = Math.floor(Math.random() * numlist.length);
-	newButton.setAttribute("onclick", "showline("+numlist[rand]+")");
+	newButton.setAttribute("onclick", "showline("+(numlist[rand]+1)++")");
 	newButton.appendChild(document.createTextNode(info[numlist[rand]][0]));
 	buttons.appendChild(newButton);
 	numlist.splice(rand,1);
