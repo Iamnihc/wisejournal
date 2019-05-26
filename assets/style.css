@@ -27,9 +27,9 @@ body{
 }
 
 #header{
-	height:7vh;
+	height:8vh;
 	position: fixed;
-	padding-bottom: 4vh;
+	padding-bottom: 1.5vh;
 	padding-top:1.5vh;
 	width:96vw;
 	padding-left: 2vw;
@@ -122,6 +122,7 @@ button:hover {
 }
 #maintitle{
 	display: flex;
+	flex: 1 1 29vh;
 	flex-direction: column;
 	vertical-align: center;
 	align-self: flex-end;
@@ -129,13 +130,27 @@ button:hover {
 
 #secondtitle{
 	display: flex;
+	flex: 10 6 10%;
 	flex-direction: column;
 	align-items: flex-end;
 	align-self: flex-end;
-	font-size:0%;
+	text-align: right;
+	font-size:60%;
 }
 
 .clicked:hover{
 	color:#999 !important;
 	background-color: #222;
+}
+#title1{
+	font-size: 5vh;
+}
+#title2{
+	font-size: 2.5vh;
+}
+#title3{
+	font-size: 2.5vh;
+}
+#title4{
+	font-size: 1.4vh;
 }

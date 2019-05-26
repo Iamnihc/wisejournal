@@ -1,8 +1,10 @@
 var dev = navigator.platform.substring(0,3).toLowerCase();
 var valid = dev =="mac" || dev == "win" || dev == "ipa";
 if (!valid){ alert("try chrome on desktop for the best experience");}
-
-
+if(window.innerHeight/window.innerWidth >2.4 ){ alert("Woah there thats very tall. Are you sure you  dont want to resize"); }
+if(window.innerHeight/window.innerWidth <.3 ){ alert("Woah there thats very tall. Are you sure you  dont want to resize"); }
+if(window.innerHeight<400 ){ alert("Woah there thats very small. Are you sure you  dont want to resize?"); }
+if(window.innerwidth<400 ){ alert("Woah there thats very small. Are you sure you  dont want to resize"); }
 
 var info = [["Event 1", "event body for things"],["Event 2","event things stuff so its long"],["Thing 3","here is stuff it should maybe possibly work"],["Thing 4","thigns that may or may not work but now theyre long"],["Thing 4","thigns that may or may not work but now theyre long"],["Thing 4","thigns that may or may not work but now theyre long"]];
 
@@ -96,3 +98,13 @@ function logKey(e){
 		aaaa();
 	}
 }
+var alerted = false;
+var alerted3 = false;
+var alerted4 = false;
+$(window).resize(function(){
+	if(window.innerHeight/window.innerWidth >2 && !alerted){alerted = true; alert("Woah there thats very tall. Are you sure you want to do that?"); }
+	if(window.innerHeight<300 ){alerted3 = true; alert("Woah there thats very small. Are you sure you  dont want to resize?"); }
+	if(window.innerwidth<400 ){alerted4 = true;  alert("Woah there thats very small. Are you sure you  dont want to resize"); }
+})
+var alerted2 = false;
+$(window).resize(function(){if(window.innerHeight/window.innerWidth <.4 && !alerted2){alerted22 = true; alert("Woah there thats very narrow. Are you sure you want to do that?"); }})
