@@ -6,7 +6,12 @@ if(window.innerHeight/window.innerWidth <.3 ){ alert("Woah there thats very tall
 if(window.innerHeight<400 ){ alert("Woah there thats very small. Are you sure you  dont want to resize?"); }
 if(window.innerwidth<400 ){ alert("Woah there thats very small. Are you sure you  dont want to resize"); }
 
-var info = [["Event 1", "event body for things"],["Event 2","event things stuff so its long"],["Thing 3","here is stuff it should maybe possibly work"],["Thing 4","thigns that may or may not work but now theyre long"],["Thing 4","thigns that may or may not work but now theyre long"],["Thing 4","thigns that may or may not work but now theyre long"]];
+var info = [["World Trade Center Built", "April 4, 1973, The world trade center opens. (give more info about what the wtc is how large waht the significance is)"],
+["World Trade Center Bombed"," The original mastermind behind 911 was a jihadist named Khalid Sheikh Mohammed, made a plan to attack the World Trade Center in 1993. Mohammed carried out a bombing of the World Trade Center in 1993. In 1996, he joined al-Qaeda and started planning for another attack. He was able to convince the Taliban to aid him in his efforts"],
+["Al-Qaeda Members Enter The US","here is stuff it should maybe possibly work"],
+["Thing 4","thigns that may or may not work but now theyre long"],
+["Thing 4","thigns that may or may not work but now theyre long"],
+["Thing 4","thigns that may or may not work but now theyre long"]];
 
 var buttons = document.getElementById("bottom");
 var numlist = [];
@@ -77,7 +82,23 @@ $("#middle").on("scroll", function () {
   }
 })
 
+
+
+var half = numlist.length/2;
 // make buttons
+while (numlist.length >half){
+
+	var newButton = document.createElement("button");
+	var rand = Math.floor(Math.random() * numlist.length);
+	newButton.setAttribute("onclick", "showline("+(numlist[rand]+1)+")");
+	newButton.setAttribute("type", "button");
+	newButton.setAttribute("id", "button" + (numlist[rand]+1));
+	newButton.appendChild(document.createTextNode(info[numlist[rand]][0]));
+	newButton.setAttribute("class", "bottombutton");
+	buttons.appendChild(newButton);
+	numlist.splice(rand,1);
+}
+
 while (numlist.length >0){
 
 	var newButton = document.createElement("button");
@@ -86,9 +107,13 @@ while (numlist.length >0){
 	newButton.setAttribute("type", "button");
 	newButton.setAttribute("id", "button" + (numlist[rand]+1));
 	newButton.appendChild(document.createTextNode(info[numlist[rand]][0]));
+	newButton.setAttribute("class", "bottombutton");
 	buttons.appendChild(newButton);
 	numlist.splice(rand,1);
 }
+// add spacer in between buttons
+
+
 
 document.addEventListener('keydown', logKey);
 function logKey(e){
