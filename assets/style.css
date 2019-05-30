@@ -87,7 +87,8 @@ body {
   width: 60%;
   border-style: none;
   position: relative;
-  margin-right: 10vw;
+  padding-right: 10vw;
+  padding-left: 5vw;
 }
 
 #bottom {
