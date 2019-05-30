@@ -47,7 +47,7 @@ body {
   color: white;
   top: 11vh;
   width: 100vw;
-  height: 80vh;
+  height: 79vh;
   border-style: solid;
   overflow: scroll;
   font-family: 'Quattrocento Sans', sans-serif;
@@ -95,7 +95,7 @@ body {
   width: 100vw;
   border-style: solid;
   border-color: black;
-  height: 10vh;
+  height: 11vh;
   position: fixed;
   bottom: 0vh;
   display: flex;
