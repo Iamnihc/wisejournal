@@ -17,12 +17,12 @@ if (window.innerwidth < 400) {
 }
 
 var info = [
-  ["World Trade Center Built", "April 4, 1973, The world trade center opens. (give more info about what the wtc is how large waht the significance is)"],
-  ["World Trade Center Bombed", " The original mastermind behind 911 was a jihadist named Khalid Sheikh Mohammed, made a plan to attack the World Trade Center in 1993. Mohammed carried out a bombing of the World Trade Center in 1993. In 1996, he joined al-Qaeda and started planning for another attack. He was able to convince the Taliban to aid him in his efforts"],
-  ["Al-Qaeda Members Enter The US", "here is stuff it should maybe possibly work"],
-  ["Thing 4", "thigns that may or may not work but now theyre long"],
-  ["Thing 4", "thigns that may or may not work but now theyre long"],
-  ["Thing 4", "thigns that may or may not work but now theyre long"]
+  ["World Trade Center Built", "April 4, 1973, The World Trade Center opens. The World Trade Center quickly became an icon of New York City,  joining the Empire State Building, The Statue of Liberty, The Brooklyn Bridge, and Time Square. The World Trade Center became a very popular tourist attraction."],
+  ["World Trade Center Bombed", " The original mastermind behind 911 was a jihadist named Khalid Sheikh Mohammed, made a plan to attack the World Trade Center in 1993. Mohammed carried out a bombing of the World Trade Center in 1993. This was done with a car bomb, and not planes."],
+  ["Planning for Attacks Begin", "In 1996, Khalid Sheikh Mohammed  joined al-Qaeda and started planning for another attack. He was able to convince the Taliban to aid him in his efforts. A long few years of planning with multiple people take place. KSM personally trains a group of operatives on how to infiltrate the US and blend in. As this training happens,  America is completely unaware of the attack."],
+  ["World Trade Center Attacked", "In 2000, 19 men from Al-Qaeda entered the United States, 4 of whom were trained as pilots. September 11th,  2001 4 planes were hijacked. 2 were flown into the north and south Towers of the World Trade Center. Later a plane was rammed into the pentagon and another fell into a grassy field in Pennsylvania after passengers overtook the hijackers arn re-routed the collision."],
+  ["Countermeasures Taken", "In 2002, New precautions are put into place, including a five-color threat system, card-access systems, metal detectors, and video cameras. The public was also encouraged to report anything that could be viewed as suspicious.  US starts working on countermeasures for cyber attacks in 2009. In May 27, 2010, the National Security Strategy guidelines were released by the DHS"],
+  ["Bin Laden Killed", "On May 2, 2011, Osama Bin Laden was killed by US special forces"]
 ];
 
 var buttons = document.getElementById("bottom");
