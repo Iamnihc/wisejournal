@@ -131,7 +131,7 @@ button:hover {
 
 #maintitle {
   display: flex;
-  flex: 1 1 29vh;
+  flex: 1 1 32vh;
   flex-direction: column;
   vertical-align: center;
   align-self: flex-end;
