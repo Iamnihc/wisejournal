@@ -60,7 +60,7 @@ function addElement(num) {
   p.setAttribute("class", "body");
   title.setAttribute("class", "title");
   console.log(num);
-  var newContent = document.createTextNode(info[num - 1][0]);
+  var newContent = document.createTextNode(info[num - 1][1]);
   title.appendChild(ttext);
   newDiv.appendChild(title);
   p.appendChild(newContent);
