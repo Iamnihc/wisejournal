@@ -38,9 +38,9 @@ var info = [
   ["Rutherford B. Hayes","1877 – 1881"],
   ["James Abram Garfield","1881"],
   ["Chester Alan Arthur","1881 – 1885"],
-  ["Grover Cleveland","1885 – 1889"],
+  ["Grover Cleveland (1)","1885 – 1889"],
   ["Benjamin Harrison","1889 – 1893"],
-  ["Grover Cleveland","1893 – 1897"],
+  ["Grover Cleveland (2)","1893 – 1897"],
   ["William McKinley","1897 – 1901"],
   ["Theodore Roosevelt","1901 – 1909"],
   ["William Howard Taft","1909 – 1913"],
@@ -89,7 +89,7 @@ function showline(num) {
     console.log("nope");
   }
 }
-
+ var curpres = 1;
 // Adding stuff
 function addElement(num) {
   var newDiv = document.createElement("div");
@@ -100,7 +100,7 @@ function addElement(num) {
   p.setAttribute("class", "body");
   title.setAttribute("class", "title");
   console.log(num);
-  var newContent = document.createTextNode(info[num - 1][1]);
+  var newContent = document.createTextNode(" was president number " + presnum + " from " +info[num - 1][1] );
   title.appendChild(ttext);
   newDiv.appendChild(title);
   p.appendChild(newContent);
@@ -109,7 +109,7 @@ function addElement(num) {
   currentDiv.appendChild(newDiv);
   var tot = $("#middle").innerHeight();
   currentDiv.scrollTo(0, tot * (num - 1));
-
+  curpres ++;
 }
 
 function aaaa() {
