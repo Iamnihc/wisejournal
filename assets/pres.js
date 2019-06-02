@@ -109,7 +109,7 @@ function addElement(num) {
   currentDiv.appendChild(newDiv);
   var tot = $("#middle").innerHeight();
   currentDiv.scrollTo(0, tot * (num - 1));
-  curpres ++;
+  presnum ++;
 }
 
 function aaaa() {
