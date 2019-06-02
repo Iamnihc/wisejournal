@@ -89,7 +89,7 @@ function showline(num) {
     console.log("nope");
   }
 }
- var curpres = 1;
+ var presnum = 1;
 // Adding stuff
 function addElement(num) {
   var newDiv = document.createElement("div");
