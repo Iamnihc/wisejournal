@@ -43,11 +43,13 @@ body {
 
 #middle {
   position: fixed;
+  float:right;
+  padding-right:15vw;
   background-color: black;
   color: white;
   top: 11vh;
-  width: 100vw;
-  height: 79vh;
+  width: 85vw;
+  height: 100vh;
   border-style: solid;
   overflow: scroll;
   font-family: 'Quattrocento Sans', sans-serif;
@@ -90,34 +92,50 @@ body {
   padding-right: 10vw;
   padding-left: 5vw;
 }
-
 #bottom {
-  width: 100vw;
-  border-style: solid;
-  border-color: black;
-  height: 11vh;
+  height: 89vh;
+  font-family: 'Quattrocento Sans', sans-serif;
   position: fixed;
   bottom: 0vh;
-  display: flex;
-	flex-direction: row;
+  display: inline-flex;
+	flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-content: space-between;
   padding-top: 0vh;
   padding-bottom: 0vh;
   padding-left: 0px;
   padding-right: 0px;
-  background-color: #333;
-	align-items: center;
+  background-color: #222;
+  align-items: center;
+  float:right;
+  margin-left: 85vw;
+  margin-left: 85vw !important;
 }
 
 button {
+  flex-grow: 2;
   background-color: lightgrey;
-  height: 40%;
-  width: 32.5%;
+
+  width: 100%;
   border-radius: 1px;
   border-style: none;
   font-family: 'Quattrocento Sans', sans-serif;
   font-size: 120%;
+}
+#navlabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+
+  background-color: #111;
+flex-grow:3;
+  width: 100%;
+  border-radius: 1px;
+  border-style: none;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size: 200%;
 }
 
 button:hover {

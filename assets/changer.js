@@ -16,13 +16,20 @@ if (window.innerwidth < 400) {
   alert("Woah there thats very small. Are you sure you  dont want to resize");
 }
 
+var docPull = [
+  ["title","date","In my lazyness I decided to use a website that I had already built instead of starting from scratch. Things may look a little weird for the first few weeks but I will slowly perfect it."],
+  ["title","date","stuff"]
+]
+
 var info = [
-  ["World Trade Center Built", "April 4, 1973, The World Trade Center opens in New York. The two towers of the World Trade Center quickly became an icon of New York City,  joining the Empire State Building, The Statue of Liberty, The Brooklyn Bridge, and Time Square. The World Trade Center became a very popular tourist attraction. These towers would soon become a lot more famous."],
-  ["World Trade Center Bombed", " The original mastermind behind 911 was a jihadist named Khalid Sheikh Mohammed, made a plan to attack the World Trade Center in 1993. There had been many terrorist attacks before this, and it wasnt that significant. Mohammed carried out a bombing of the World Trade Center in 1993. This was done with a car bomb, and not planes. This Attack was relatavely small, with only 6 deaths, very small compared to the later attacks."],
-  ["Planning for Attacks Begin", "In 1996, Khalid Sheikh Mohammed  joined al-Qaeda and started planning for another attack. He was able to convince the Taliban to aid him in his efforts. A long few years of planning with multiple people take place. KSM personally trains a group of operatives on how to infiltrate the US and blend in. As this training happens,  America is completely unaware of the attack."],
-  ["World Trade Center Attacked", "In 2000, 19 men from Al-Qaeda entered the United States, 4 of whom were trained as pilots. September 11th,  2001 4 planes were hijacked. 2 were flown into the north and south Towers of the World Trade Center. Later a plane was rammed into the pentagon and another fell into a grassy field in Pennsylvania after passengers overtook the hijackers arn re-routed the collision. Although there had been many terrorist attacks before this, this was the largest in US history, bringing awareness to the subject"],
-  ["Countermeasures Taken", "In 2002, New precautions are put into place, including a five-color threat system, card-access systems, metal detectors, and video cameras. Due to the recent attacks, the public was accepting of this loss of privacy in trade for a large increase in security. The public was also encouraged to report anything that could be viewed as suspicious.  US starts working on countermeasures for cyber attacks in 2009. In May 27, 2010, the National Security Strategy guidelines were released by the DHS"],
-  ["Bin Laden Killed", "On May 2, 2011, Osama Bin Laden was killed by US special forces. This event was celebrated all across the United States."]
+
+  ["Journal Entry 0.0: Notes", docPull[0][0] ],
+  ["Journal Entry 0.1: Goals", docPull[1][0] ],
+  ["Journal Entry 0.2: I've Got the Horses in the Back", ""],
+  ["Journal Entry 0.3: What I have done before", ""],
+  ["Journal Entry 0.4: Oh No", ""],
+  ["Journal Entry 1.0", ""],
+  ["Journal Entry 1.1", ""],
 ];
 
 var buttons = document.getElementById("bottom");
@@ -31,23 +38,21 @@ for (var i = 0; i < info.length; i++) {
   numlist.push(i);
 }
 
-var currentEvent = 1;
+var currentEvent = info.length;
 
 function showline(num) {
   console.log(num);
-  if (num == currentEvent) {
-    console.log("adding");
-    currentEvent++;
-    addElement(num)
-    document.getElementById("button" + num).setAttribute("class", "clicked");
-  } else if (num < currentEvent) {
+
     var currentDiv = document.getElementById("middle");
     var tot = $("#middle").innerHeight();
-    currentDiv.scrollTo(0, tot * (num - 1));
-  } else {
-    alert("No this is incorrect");
-    console.log("nope");
-  }
+    currentDiv.scrollTo(0, tot * (num ));
+
+}
+
+for (let i =1; i<info.length+1; i++){
+  console.log("adding");
+  currentEvent++;
+  addElement(i)
 }
 
 // Adding stuff
@@ -68,7 +73,7 @@ function addElement(num) {
   var currentDiv = document.getElementById("middle");
   currentDiv.appendChild(newDiv);
   var tot = $("#middle").innerHeight();
-  currentDiv.scrollTo(0, tot * (num - 1));
+//  currentDiv.scrollTo(0, tot * (num - 1));
 
 }
 
@@ -97,20 +102,27 @@ $("#middle").on("scroll", function() {
 
 var half = numlist.length / 2;
 // make buttons
-while (numlist.length > 0) {
+for (let rand =0; rand<info.length; rand++){
 
   var newButton = document.createElement("button");
-  var rand = Math.floor(Math.random() * numlist.length);
-  newButton.setAttribute("onclick", "showline(" + (numlist[rand] + 1) + ")");
+
+  newButton.setAttribute("onclick", "showline(" + (rand) + ")");
   newButton.setAttribute("type", "button");
-  newButton.setAttribute("id", "button" + (numlist[rand] + 1));
-  newButton.appendChild(document.createTextNode(info[numlist[rand]][0]));
+  newButton.setAttribute("id", "button" + (rand + 1));
+  newButton.appendChild(document.createTextNode(info[rand][0]));
   newButton.setAttribute("class", "bottombutton");
   buttons.appendChild(newButton);
-  numlist.splice(rand, 1);
+
 }
 
 // add spacer in between buttons
+
+
+
+
+
+
+
 
 
 
@@ -123,6 +135,13 @@ function logKey(e) {
     aaaa();
   }
 }
+
+
+
+
+
+
+
 var alerted = false;
 var alerted3 = false;
 var alerted4 = false;
@@ -147,3 +166,6 @@ $(window).resize(function() {
     alert("Woah there thats very narrow. Are you sure you want to do that?");
   }
 })
+
+
+document.getElementById("middle").scrollTo(0, 0);
