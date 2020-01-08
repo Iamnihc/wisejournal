@@ -63,6 +63,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-content: center;
+  white-space: -moz-pre-wrap;
+white-space: -o-pre-wrap;
+word-wrap: break-word;
+white-space: pre-wrap;
 }
 
 .title {
@@ -94,6 +98,7 @@ body {
 }
 #bottom {
   height: 89vh;
+  width:15vw;
   font-family: 'Quattrocento Sans', sans-serif;
   position: fixed;
   bottom: 0vh;
@@ -114,7 +119,7 @@ body {
 }
 
 button {
-  flex-grow: 2;
+  flex-grow: 1;
   background-color: lightgrey;
 
   width: 100%;
@@ -122,6 +127,9 @@ button {
   border-style: none;
   font-family: 'Quattrocento Sans', sans-serif;
   font-size: 120%;
+
+  white-space: pre-wrap;
+
 }
 #navlabel {
   display: flex;
@@ -130,7 +138,7 @@ button {
   color:white;
 
   background-color: #111;
-flex-grow:3;
+flex-grow:10;
   width: 100%;
   border-radius: 1px;
   border-style: none;
