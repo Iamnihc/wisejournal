@@ -1,3 +1,5 @@
+
+
 .nav {
   margin: 0px !important;
 }
@@ -44,11 +46,11 @@ body {
 #middle {
   position: fixed;
   float:right;
-  padding-right:15vw;
+  padding-right:max(15vw, 250px);
   background-color: black;
   color: white;
   top: 11vh;
-  width: 85vw;
+  width: min(85vw, calc(100vw - 250px));
   height: 100vh;
   border-style: solid;
   overflow: scroll;
@@ -91,12 +93,14 @@ white-space: pre-wrap;
   justify-content: right;
   float: right;
   width: 60%;
+
   border-style: none;
   position: relative;
   padding-right: 10vw;
   padding-left: 5vw;
 }
 #bottom {
+  min-width: 250px;
   height: 89vh;
   width:15vw;
   font-family: 'Quattrocento Sans', sans-serif;
@@ -114,8 +118,7 @@ white-space: pre-wrap;
   background-color: #222;
   align-items: center;
   float:right;
-  margin-left: 85vw;
-  margin-left: 85vw !important;
+  margin-left: min(85vw, calc(100% - 250px) )!important;
 }
 
 button {
