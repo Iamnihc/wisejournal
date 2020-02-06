@@ -1,5 +1,3 @@
-
-
 .nav {
   margin: 0px !important;
 }
@@ -44,6 +42,7 @@ body {
 }
 
 #middle {
+  scroll-snap-type: y mandatory;
   position: fixed;
   float:right;
   padding-right:max(15vw, 250px);
@@ -51,20 +50,22 @@ body {
   color: white;
   top: 11vh;
   width: min(85vw, calc(100vw - 250px));
-  height: 100vh;
+  height: 89vh;
   border-style: solid;
   overflow: scroll;
   font-family: 'Quattrocento Sans', sans-serif;
 }
 
 .infosection {
+  scroll-snap-align: start;
   border-color: black;
   width: 100%;
-  height: 100% !important;
+  height: 100%;
   overflow: hidden;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-content: center;
+  justify-content: center;
   white-space: -moz-pre-wrap;
 white-space: -o-pre-wrap;
 word-wrap: break-word;
@@ -74,30 +75,39 @@ white-space: pre-wrap;
 .title {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-around;
+  flex-direction: row;
   text-align: center;
   vertical-align: center;
   float: left;
-  width: 34%;
+  width: 100%;
+  height: 7%;
   border-style: none;
   position: relative;
-  border-right: 5px solid rgb(125, 185, 153) !important;
-  border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1) 45%, rgba(255, 255, 255, 1) 55%, rgba(255, 255, 255, 0) 60%) !important;
+  margin:10px;
+  border-bottom: 5px solid rgb(125, 185, 153) !important;
+  border-image: linear-gradient(to left, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1) 45%, rgba(255, 255, 255, 1) 55%, rgba(255, 255, 255, 0) 60%) !important;
   border-image-slice: 2 !important;
 }
 
+.titlepart:nth-child(2){
+  width:50% ;
+}
+.titlepart{
+  width:20%;
+}
 .body {
   display: flex;
-  align-items: center;
-  justify-content: right;
   float: right;
-  width: 60%;
-
+  width: 90%;
+  max-height: 80vh;
+  line-height:150% ;
   border-style: none;
   position: relative;
-  padding-right: 10vw;
-  padding-left: 5vw;
+  overflow:scroll;
+  margin: 3% !important;
+
+  font-size: large;
 }
 #bottom {
   min-width: 250px;
@@ -175,6 +185,7 @@ button:hover {
   text-align: right;
   font-size: 60%;
 }
+
 
 .clicked:hover {
   color: #999 !important;
